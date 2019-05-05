@@ -32,6 +32,15 @@ public class BowlingGameTest extends TestCase {
         assertEquals(16, bowlingGame.score());
     }
 
+    @Test
+    public void testOneStrike () throws Exception {
+        bowlingGame.roll(10);
+        bowlingGame.roll(3);
+        bowlingGame.roll(4);
+        multipleThrow(16,0);
+        assertEquals(24, bowlingGame.score());
+    }
+
     private void multipleThrow(int rolls, int pins) {
         for (int i = 0; i < rolls; i++) {
             bowlingGame.roll(pins);
