@@ -15,7 +15,10 @@ public class BowlingGame {
             if(isSpare(index)){
               score += 10 + rolls[index+2];
               index +=2;
-            }else {
+            }else if(rolls[index] == 10){
+                score += 10 + rolls[index + 1] + rolls[index + 2];
+                index++;
+            } else {
                 score += rolls[index] + rolls[index + 1];
                 index += 2;
             }
