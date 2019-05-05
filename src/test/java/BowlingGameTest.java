@@ -29,4 +29,13 @@ public class BowlingGameTest extends TestCase {
         assertEquals(20, bowlingGame.score());
     }
 
+    @Test
+    public void testOneSpare () throws Exception {
+        bowlingGame.roll(5);
+        bowlingGame.roll(5);
+        bowlingGame.roll(3);
+        multipleThrow(17,0);
+        assertEquals(16, bowlingGame.score());
+    }
+
 }
