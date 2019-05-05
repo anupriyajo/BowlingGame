@@ -6,12 +6,6 @@ public class BowlingGameTest extends TestCase {
 
     private BowlingGame bowlingGame;
 
-    private void multipleThrow(int rolls, int pins) {
-        for (int i = 0; i < rolls; i++) {
-            bowlingGame.roll(pins);
-        }
-    }
-
     @Before
     public void setUp(){
         bowlingGame = new BowlingGame();
@@ -36,6 +30,12 @@ public class BowlingGameTest extends TestCase {
         bowlingGame.roll(3);
         multipleThrow(17,0);
         assertEquals(16, bowlingGame.score());
+    }
+
+    private void multipleThrow(int rolls, int pins) {
+        for (int i = 0; i < rolls; i++) {
+            bowlingGame.roll(pins);
+        }
     }
 
 }
