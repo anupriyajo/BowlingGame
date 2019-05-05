@@ -12,19 +12,19 @@ public class BowlingGameTest extends TestCase {
     }
 
     @Test
-    public void testGutterGame () throws Exception {
+    public void testGutterGame () {
         multipleThrow(20, 0);
         assertEquals(0, bowlingGame.score());
     }
 
     @Test
-    public void testAll1Game () throws Exception {
+    public void testAll1Game () {
         multipleThrow(20, 1);
         assertEquals(20, bowlingGame.score());
     }
 
     @Test
-    public void testOneSpare () throws Exception {
+    public void testOneSpare () {
         rollSpare();
         bowlingGame.roll(3);
         multipleThrow(17,0);
@@ -32,7 +32,7 @@ public class BowlingGameTest extends TestCase {
     }
 
     @Test
-    public void testOneStrike () throws Exception {
+    public void testOneStrike () {
         rollStrike();
         bowlingGame.roll(3);
         bowlingGame.roll(4);
@@ -41,7 +41,7 @@ public class BowlingGameTest extends TestCase {
     }
 
     @Test
-    public void testPerfectGame () throws Exception {
+    public void testPerfectGame () {
         multipleThrow(12,10);
         assertEquals(300, bowlingGame.score());
     }
