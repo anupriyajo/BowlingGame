@@ -40,6 +40,12 @@ public class BowlingGameTest extends TestCase {
         assertEquals(24, bowlingGame.score());
     }
 
+    @Test
+    public void testPerfectGame () throws Exception {
+        multipleThrow(12,10);
+        assertEquals(300, bowlingGame.score());
+    }
+
     private void rollSpare() {
         bowlingGame.roll(5);
         bowlingGame.roll(5);
