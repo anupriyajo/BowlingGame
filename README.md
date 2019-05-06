@@ -19,6 +19,9 @@ Code decisions:
 
 1. I have used a simple maven project focussed on oogic. Since the project was more focused on logic, musch designing is not done.
 2. The problem was approached in a TDD way.
+3. The code is not thread safe.
+4. Main is not added as the behaviour of use is not decided.
+5. There is no edge check for the condition when someone tries to calculate the score without playing all rolls.
 
 To run:
 
